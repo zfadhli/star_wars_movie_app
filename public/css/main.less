@@ -1,0 +1,99 @@
+@import '../vendor/spectre.css/spectre.less';
+@import '../vendor/spectre.css/spectre-exp.less';
+.wrapper {
+  margin: 0 auto;
+  max-width: 112rem;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+}
+
+a.btn.btn-link.active {
+  border-radius: 0;
+  border-bottom: 2px solid #5764c6;
+}
+
+.navbar {
+  padding-top: 4.8rem;
+  >.title>a {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  >.link>a {
+    color: #333;
+    .text-uppercase;
+  }
+  >.link>.dropdown>a {
+    color: #333;
+  }
+  .link>.dropdown>.menu>.menu-item {
+    &:not(:last-child) {
+      border-bottom: .2rem solid #eaeaea;
+    }
+  }
+}
+
+.error-1 {
+  padding: 8rem 0;
+  >.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  >.wrapper>.error-msg {
+    padding-top: 8rem;
+  }
+}
+
+.content-1 {
+  padding: 8rem 0;
+  >.wrapper {
+    >h1 {
+      margin: 4.8rem 0;
+      .text-center;
+      font-weight: 500;
+    }
+  }
+  >.wrapper>.columns>.column.col-4 {
+    position: relative;
+    &:hover>.details {
+      opacity: 1;
+    }
+  }
+  >.wrapper>.columns>.column.col-4>.details {
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    padding: 4.8rem;
+    margin: 1rem;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.content-2 {
+  padding: 8rem 0;
+  >.wrapper>h2 {
+    margin: 4.8rem 0;
+  }
+  >.wrapper>.columns>.column.col-5 {
+    >.description {
+      margin-top: -1rem;
+    }
+    >.characters {
+      margin: 3.6rem 0;
+    }
+    >.characters>ul {
+      list-style: none;
+      margin: 0;
+    }
+    >.characters>ul>li {
+      display: inline-block;
+      margin-right: 2.4rem;
+    }
+  }
+}

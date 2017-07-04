@@ -1,0 +1,17 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+  <section class="error-1">
+    <div class="wrapper">
+      <h1>{{ message }}</h1>
+      <h2>{{ error.status or error }}</h2>
+      <a href="/">
+        <img src="/img/404.jpg" class="img-responsive" alt="">
+      </a>
+
+      <!--<div class="error-msg">
+        <pre>{{ error.stack }}</pre>
+      </div>-->
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout.nunjucks' %} {% block content %}
+<section class="content-2">
+  <div class="wrapper">
+    <h2>{{movie.title}}</h2>
+
+    <div class="columns">
+      <div class="column col-6">
+        <img src="/img/{{movie.hero_image}}" class="img-responsive" alt="">
+      </div>
+      <div class="column col-1"></div>
+      <div class="column col-5">
+        <div class="description">
+          <h3>Description</h3>
+          <p>{{movie.description}}</p>
+        </div>
+
+        <div class="characters">
+          <h3>Main Characters</h3>
+          <ul>
+            {% for actor in movie.main_characters%}
+            <li>{{actor}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

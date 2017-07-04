@@ -1,0 +1,38 @@
+// variables
+@light-color: #fff;
+@color-light: #f2f2f2;
+@color-dark: #333333;
+@silver: #bdc3c7;
+@emerald: #2ecc71;
+@btn-dark: #3c556e;
+@btn-danger: #c0392b;
+// mixins
+.image-overlay(@x) {
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(@x);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+
+// utilities
+.wrapper {
+  margin: 0 auto;
+  max-width: 112rem;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.img-fluid {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.bg-clouds {
+  background-color: #ecf0f1;
+}
+
+.bg-midnight-blue {
+  background-color: #2c3e50;
+}

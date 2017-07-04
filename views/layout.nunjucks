@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Zulfadhli Zakari">
+  <meta name="description" content="">
+  <title>{{ title }}</title>
+  <link rel="icon" type="image/png" href="img/logo@2x.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"
+  />
+  <link rel="stylesheet" href="/css/main.css" /> {% if ENV_DEVELOPMENT %}
+  <script src="http://localhost:35729/livereload.js"></script>
+  {% endif %}
+</head>
+
+<body>
+
+  <section class="header-1">
+    <div class="wrapper">
+      <header class="navbar">
+        <section class="navbar-section title">
+          <a href="/" class="navbar-brand">Star Wars</a>
+        </section>
+        <section class="navbar-section link">
+          <a href="/" class="btn btn-link">Home</a>
+          <div class="dropdown">
+            <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">MOVIES <i class="ion-chevron-down"></i></a>
+            <!-- menu component -->
+            <ul class="menu">
+              {% for movie in movies %}
+              <li class="menu-item">
+                <a href="/star_wars_episode/{{movie.episode_number}}">{{movie.title}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </header>
+  </section>
+
+  {% block content %}{% endblock %}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

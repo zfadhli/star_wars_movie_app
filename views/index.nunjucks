@@ -1,0 +1,19 @@
+{% extends 'layout.nunjucks' %} {% block content %}
+<section class="content-1">
+  <div class="wrapper">
+    <h1>Star Wars Movies</h1>
+
+    <div class="columns">
+      {% for movie in movies %}
+      <div class="column col-4">
+        <img src="/img/{{movie.poster}}" class="img-responsive" alt="">
+        <div class="details">
+          <h4>{{movie.title}}</h4>
+          <a href="/star_wars_episode/{{movie.episode_number}}" class="btn btn-primary btn-lg">View more <i class="ion-arrow-right-c"></i></a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
